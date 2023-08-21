@@ -1,0 +1,71 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth !important;
+    scroll-padding-top: var(--scroll-padding);
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 100vw;
+    scroll-snap-type: y mandatory !important;
+}
+
+.collapse-input {
+    width: 0;
+    display: hidden;
+    overflow: hidden;
+    transition: 0.2s;
+    opacity: 0;
+}
+
+.expanded-input {
+    opacity: 1;
+    display: block;
+    width: 25vw;
+    transition: 0.2s;
+}
+
+
+.image-container {
+    width: 50vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.full-page-container {
+    scroll-snap-align: start !important;
+}
+
+.intro-button:hover {
+    background: red;
+}
+
+.grid {
+    overflow: hidden;
+}
+
+.grid-item > img {
+    position: relative;
+    width: 100%;
+    image-rendering: optimizeSpeed;
+}
+
+.photos-gradient {
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to bottom, tranparent, #DCC1AB);
+    background-size: 50% 100%;
+    z-index: 96;
+}
